@@ -1,6 +1,6 @@
 #!/bin/bash 
 case "$1" in
-	--data|-d) echo "dzisiejsza data to: $(date)";;
+		--data|-d) echo "dzisiejsza data to: $(date)";;
 	--logs|-l) if [ "$2" == "30" ]
 				then
 				for (( c=1; c<=$2; c++))
@@ -22,4 +22,6 @@ case "$1" in
 			echo "--logs 30 lub -l 30"
 			echo "--help lub -h"
 			echo "--init lub -i";;
+	--init|-i) git clone https://github.com/Paulinax33/lab4.0.git
+			echo "klonowanie sie powiodlo";;
 esac
