@@ -1,7 +1,7 @@
 #!/bin/bash 
 case "$1" in
-	--data) echo "dzisiejsza data to: $(date)";;
-	--logs) if [ "$2" == "30" ]
+	--data|-d) echo "dzisiejsza data to: $(date)";;
+	--logs|-l) if [ "$2" == "30" ]
 				then
 				for (( c=1; c<=$2; c++))
 					do 
@@ -15,10 +15,11 @@ case "$1" in
 					done
 			fi
 			;;
-	--help) echo "Dostepne opcje:"
+	--help|-h) echo "Dostepne opcje:"
 			echo
-			echo "--data - wyswietlenie daty"
-			echo "--logs - utworzenie plikow"
-			echo "--logs 30 - utworzenie 30 plikow"
-			echo "--help - wyswietlenie wszystkich dostepnych opcji"
+			echo "--data lub -d"
+			echo "--logs lub -l"
+			echo "--logs 30 lub -l 30"
+			echo "--help lub -h"
+			echo "--init lub -i";;
 esac
